@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Phit137/updated-exercise-app.git/static/css/main.b603abea.css",
+    "main.js": "/Phit137/updated-exercise-app.git/static/js/main.dfcc4e9d.js",
+    "static/js/488.8ac8a5fd.chunk.js": "/Phit137/updated-exercise-app.git/static/js/488.8ac8a5fd.chunk.js",
+    "index.html": "/Phit137/updated-exercise-app.git/index.html",
+    "main.b603abea.css.map": "/Phit137/updated-exercise-app.git/static/css/main.b603abea.css.map",
+    "main.dfcc4e9d.js.map": "/Phit137/updated-exercise-app.git/static/js/main.dfcc4e9d.js.map",
+    "488.8ac8a5fd.chunk.js.map": "/Phit137/updated-exercise-app.git/static/js/488.8ac8a5fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b603abea.css",
+    "static/js/main.dfcc4e9d.js"
+  ]
+}
