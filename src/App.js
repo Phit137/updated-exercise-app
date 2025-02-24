@@ -1,7 +1,10 @@
+// App.js
+
 import React, { useState } from 'react';
 import './App.css';
 import RepetitionExercise from './components/RepetitionExercise';
 import DurationExercise from './components/DurationExercise';
+import RunningExercise from './components/RunningExercise'; // Import the RunningExercise component
 
 function App() {
   // State to track which screen is showing
@@ -16,7 +19,7 @@ function App() {
     setCurrentScreen('exerciseTypeSelection');
   };
 
-  // Function to go to the exercise screen (either Repetition or Duration)
+  // Function to go to the exercise screen (either Repetition, Duration, or Running)
   const handleTypeSelect = (type) => {
     setSelectedType(type);
     setCurrentScreen('exercise');
@@ -44,12 +47,19 @@ function App() {
       {currentScreen === 'exerciseTypeSelection' && (
         <div>
           <h2>{selectedExercise}</h2>
-          <button onClick={() => handleTypeSelect('repetition')}>Repetitions</button>
-          <button onClick={() => handleTypeSelect('duration')}>Duration</button>
+          {selectedExercise === 'Running' ? (
+            // Pass handleBackToSelection to the RunningExercise component
+            <RunningExercise name={selectedExercise} onBack={handleBackToSelection} />
+          ) : (
+            <>
+              <button onClick={() => handleTypeSelect('repetition')}>Repetitions</button>
+              <button onClick={() => handleTypeSelect('duration')}>Duration</button>
+            </>
+          )}
         </div>
       )}
 
-      {currentScreen === 'exercise' && (
+      {currentScreen === 'exercise' && selectedExercise !== 'Running' && (
         <div>
           <h2>{selectedExercise}</h2>
           {selectedType === 'repetition' && (
